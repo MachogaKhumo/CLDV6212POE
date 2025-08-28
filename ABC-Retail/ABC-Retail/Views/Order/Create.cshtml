@@ -1,0 +1,112 @@
+﻿@model OrderCreateViewModel
+@{
+    ViewData["Title"] = "Create Your Order";
+}
+<h2>Create Your Order</h2>
+<form method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="mb-3">
+                <label class="form-label">Customer</label>
+                <select asp-for="CustomerId" asp-items="Model.Customers" class="form-select" required>
+                    <option value="">-- Select Customer --</option>
+                </select>
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Product</label>
+                <select asp-for="ProductId" asp-items="Model.Products" class="form-select" id="productSelect" required>
+                    <option value="">-- Select Product --</option>
+                </select>
+                <span asp-validation-for="ProductId" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Quantity</label>
+                <input asp-for="Quantity" type="number" min="1" class="form-control" id="quantityInput" required />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Order Date</label>
+                <input asp-for="OrderDate" type="datetime-local" class="form-control" required />
+                <span asp-validation-for="OrderDate" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Status</label>
+                <select asp-for="Status" class="form-select" required>
+                    <option value="Pending">Pending</option>
+                    <option value="Processing">Processing</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <button class="btn btn-primary" type="submit">Create Order</button>
+            <a class="btn btn-secondary" asp-action="Index">Cancel</a>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Order Summary</h5>
+                    <p class="mb-1">Unit Price: R <span id="unitPriceDisplay">0.00</span></p>
+                    <p class="mb-1">Quantity: <span id="quantityDisplay">@Model.Quantity</span></p>
+                    <h6>Total: R <span id="totalPriceDisplay">0.00</span></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialize with default values
+            updateOrderSummary(0, $('#quantityInput').val());
+
+            // When product selection changes
+            $('#productSelect').change(function () {
+                var productId = $(this).val();
+                if (productId) {
+                    // AJAX call to get product price
+                    $.get('@Url.Action("GetProductPrice", "Order")', { productId: productId })
+                        .done(function (data) {
+                            console.log('Product price response:', data); // Debug log
+                            if (data && data.price !== undefined) {
+                                updateOrderSummary(data.price, $('#quantityInput').val());
+                            } else {
+                                console.error('Invalid response format:', data);
+                                updateOrderSummary(0, $('#quantityInput').val());
+                            }
+                        })
+                        .fail(function (xhr, status, error) {
+                            console.error('AJAX error:', status, error);
+                            alert('Error fetching product price. Check console for details.');
+                            updateOrderSummary(0, $('#quantityInput').val());
+                        });
+                } else {
+                    updateOrderSummary(0, $('#quantityInput').val());
+                }
+            });
+
+            // When quantity changes
+            $('#quantityInput').on('input change', function () {
+                var unitPrice = parseFloat($('#unitPriceDisplay').text()) || 0;
+                var quantity = parseInt($(this).val()) || 0;
+                updateOrderSummary(unitPrice, quantity);
+            });
+
+            function updateOrderSummary(unitPrice, quantity) {
+                console.log('Updating summary - UnitPrice:', unitPrice, 'Quantity:', quantity); // Debug log
+
+                $('#unitPriceDisplay').text(unitPrice.toFixed(2));
+                $('#quantityDisplay').text(quantity);
+
+                var totalPrice = unitPrice * quantity;
+                $('#totalPriceDisplay').text(totalPrice.toFixed(2));
+            }
+        });
+    </script>
+}

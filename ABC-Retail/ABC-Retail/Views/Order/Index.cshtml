@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "Orders";
+}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Orders</h2>
+    <a class="btn btn-primary" href="/Order/Create">Create Order</a>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Order Id</th>
+            <th>Username</th>
+            <th>Product</th>
+            <th>Date</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in Model)
+        {
+            var badge = o.Status == "Completed" ? "bg-success" : o.Status == "Processing" ? "bg-warning text-dark" : o.Status == "Cancelled" ? "bg-danger" : "bg-secondary";
+            <tr>
+                <td>@o.RowKey</td>
+                <td>@o.Username</td>
+                <td>@o.ProductName</td>
+                <td>@o.OrderDate.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@o.Quantity</td>
+                <td>R @o.TotalPrice</td>
+                <td><span class="badge @badge">@o.Status</span></td>
+                <td class="text-end">
+                    <a class="btn btn-sm btn-outline-info" href="/Order/Details/@o.RowKey">Details</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="/Order/Edit/@o.RowKey">Edit</a>
+                    <form method="post" asp-action="Delete" asp-route-id="@o.RowKey" class="d-inline">
+                        <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Delete this order?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

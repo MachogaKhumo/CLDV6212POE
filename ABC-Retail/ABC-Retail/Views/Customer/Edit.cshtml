@@ -1,0 +1,36 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Edit Customer";
+}
+<h2>Edit Customer</h2>
+<form method="post">
+    <input type="hidden" asp-for="PartitionKey" />
+    <input type="hidden" asp-for="RowKey" />
+    <input type="hidden" asp-for="ETag" />
+
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Surname</label>
+        <input asp-for="Surname" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input asp-for="Username" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Shipping Address</label>
+        <input asp-for="ShippingAddress" class="form-control" />
+    </div>
+    <button class="btn btn-primary" type="submit">Update</button>
+    <a class="btn btn-secondary" href="/Customer">Cancel</a>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

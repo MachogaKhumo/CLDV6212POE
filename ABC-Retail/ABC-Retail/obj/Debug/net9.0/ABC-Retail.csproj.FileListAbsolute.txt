@@ -1,0 +1,8 @@
+C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC-Retail.csproj.AssemblyReference.cache
+C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC-Retail.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC-Retail.AssemblyInfoInputs.cache
+C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC-Retail.AssemblyInfo.cs
+C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC-Retail.csproj.CoreCompileInputs.cache
+C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC-Retail.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC-Retail.RazorAssemblyInfo.cache
+C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC-Retail.RazorAssemblyInfo.cs

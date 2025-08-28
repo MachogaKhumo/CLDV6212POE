@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Products";
+}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Products</h2>
+    <a class="btn btn-primary" href="/Product/Create">Add New Product</a>
+</div>
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            var badge = p.StockAvailable < 5 ? "bg-danger" : p.StockAvailable < 10 ? "bg-warning text-dark" : "bg-success";
+            <tr>
+                <td style="width:120px">
+                    @if (!string.IsNullOrEmpty(p.ImageUrl))
+                    {
+                        <img src="@p.ImageUrl" alt="@p.ProductName" class="img-thumbnail" style="max-width:110px" />
+                    }
+                </td>
+                <td>@p.ProductName</td>
+                <td>@p.Description</td>
+                <td>R @p.Price</td>
+                <td><span class="badge @badge">@p.StockAvailable</span></td>
+                <td class="text-end">
+                    <a class="btn btn-sm btn-outline-secondary" href="/Product/Edit/@p.RowKey">Edit</a>
+                    <form method="post" asp-action="Delete" asp-route-id="@p.RowKey" class="d-inline">
+                        <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Delete this product?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Welcome to ABC Retailers!</h2>
+    <p class="lead text-center">Your one-stop shop for the best deals and latest products</p>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+
+        <!-- Customers -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                    <h3 class="card-title">Customers</h3>
+                    <p class="card-text">Manage customer profiles.</p>
+                    <h5 class="card-text">(@Model.CustomerCount total)</h5>
+                    <a href="/Customer" class="btn btn-outline-primary btn-sm">View Customers</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-box fa-3x text-success mb-3"></i>
+                    <h5 class="card-title">Orders</h5>
+                    <p class="card-text">Track and manage orders.</p>
+                    <h5 class="card-text">(@Model.OrderCount total)</h5>
+                    <a href="/Order" class="btn btn-outline-success btn-sm">View Orders</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Images -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-image fa-3x text-warning mb-3"></i>
+                    <h5 class="card-title">Product</h5>
+                    <p class="card-text">Upload and browse product media.</p>
+                    <h5 class="card-text">(@Model.ProductCount total)</h5>
+                    <a href="/Product" class="btn btn-outline-warning btn-sm">View Images</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upload Proofs -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-upload fa-3x text-info mb-3"></i>
+                    <h5 class="card-title">Upload Files</h5>
+                    <p class="card-text">Upload payment proofs or contracts.</p>
+                    <div class="total-count" style="visibility: hidden;">Placeholder</div>
+                    <a href="/Upload" class="btn btn-outline-info btn-sm">Upload Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<h3 class="mb-3">Featured Products</h3>
+<div class="row row-cols-1 row-cols-md-3 g-3">
+    @foreach (var p in Model.FeaturedProducts)
+    {
+        <div class="col">
+            <div class="card h-100">
+                @if (!string.IsNullOrEmpty(p.ImageUrl))
+                {
+                    <img src="@p.ImageUrl" class="card-img-top" alt="@p.ProductName" />
+                }
+                <div class="card-body">
+                    <h5 class="card-title">@p.ProductName</h5>
+                    <p class="card-text">@p.Description</p>
+                    <span class="badge bg-primary">R @p.Price</span>
+                </div>
+            </div>
+        </div>
+    }
+</div>

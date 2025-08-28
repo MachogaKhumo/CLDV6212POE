@@ -1,0 +1,12 @@
+﻿<h2>Order Details</h2>
+<table class="table table-bordered">
+    <tr><th>Order Id</th><td>@Model.RowKey</td></tr>
+    <tr><th>User</th><td>@Model.Username</td></tr>
+    <tr><th>Product</th><td>@Model.ProductName</td></tr>
+    <tr><th>Date</th><td>@Model.OrderDate</td></tr>
+    <tr><th>Quantity</th><td>@Model.Quantity</td></tr>
+    <tr><th>Unit Price</th><td>R @Model.UnitPrice</td></tr>
+    <tr><th>Total Price</th><td>R @Model.TotalPrice</td></tr>
+    <tr><th>Status</th><td>@Model.Status</td></tr>
+</table>
+<a class="btn btn-secondary" href="/Order">Back</a>
