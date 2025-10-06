@@ -4,6 +4,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	  <!-- Add this line to suppress the warning -->
+	  <NoWarn>NETSDK1206</NoWarn>
     <RootNamespace>ABC_Retail</RootNamespace>
   </PropertyGroup>
 

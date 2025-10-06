@@ -12,6 +12,10 @@ namespace ABC_Retail
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            // Register the Functions API HTTP Client
+            builder.Services.AddHttpClient<IFunctionsApi, FunctionsApiClient>();
+            builder.Services.AddScoped<IFunctionsApi, FunctionsApiClient>();
+
             // Register Azure Storage Service
             builder.Services.AddScoped<IAzureStorageService, AzureStorageService>();
 

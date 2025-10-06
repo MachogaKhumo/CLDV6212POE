@@ -7,7 +7,12 @@ namespace ABC_Retail.Controllers
     public class CustomerController : Controller
     {
         private readonly IAzureStorageService _storage;
-        public CustomerController(IAzureStorageService storage) => _storage = storage;
+        private readonly IFunctionsApi _functionsApi;
+        public CustomerController(IAzureStorageService storage, IFunctionsApi functionsApi)
+        {
+            _storage = storage;
+            _functionsApi = functionsApi; // Inject Functions API
+        }
 
         public async Task<IActionResult> Index()
         {
@@ -23,8 +28,19 @@ namespace ABC_Retail.Controllers
         public async Task<IActionResult> Create(Customer model)
         {
             if (!ModelState.IsValid) return View(model);
-            await _storage.AddCustomerAsync(model);
-            TempData["Msg"] = "Customer added.";
+            // Try Functions API first, fallback to direct storage
+            var success = await _functionsApi.AddCustomerAsync(model);
+            if (!success)
+            {
+                // Fallback to direct storage
+                await _storage.AddCustomerAsync(model);
+                TempData["Msg"] = "Customer added (direct storage).";
+            }
+            else
+            {
+                TempData["Msg"] = "Customer added via Functions API.";
+            }
+
             return RedirectToAction(nameof(Index));
         }
 

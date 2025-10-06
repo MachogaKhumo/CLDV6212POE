@@ -12,10 +12,12 @@ namespace ABC_Retail.Controllers
     public class OrderController : Controller
     {
         private readonly IAzureStorageService _storage;
+        private readonly IFunctionsApi _functionsApi;
 
-        public OrderController(IAzureStorageService storage)
+        public OrderController(IAzureStorageService storage, IFunctionsApi functionsApi)
         {
             _storage = storage;
+            _functionsApi = functionsApi; // Inject Functions API
         }
 
         public async Task<IActionResult> Index()
@@ -69,7 +71,15 @@ namespace ABC_Retail.Controllers
             };
 
             await _storage.AddOrderAsync(order);
-            await _storage.EnqueueOrderMessageAsync($"Processing order {order.RowKey} for {order.Username} – {order.Quantity} x {order.ProductName}");
+
+            // Try Functions API first for queue message
+            var message = $"Processing order {order.RowKey} for {order.Username} – {order.Quantity} x {order.ProductName}";
+            var queued = await _functionsApi.QueueOrderMessageAsync(message);
+            if (!queued)
+            {
+                // Fallback to direct storage
+                await _storage.EnqueueOrderMessageAsync(message);
+            }
 
             TempData["Msg"] = "Order created and queued for processing.";
             return RedirectToAction(nameof(Index));

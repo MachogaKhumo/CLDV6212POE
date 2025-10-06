@@ -12445,11 +12445,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\ABC_Retail.csproj",
+      "projectUniqueName": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\ABC_Retail.csproj",
       "projectName": "ABC_Retail",
-      "projectPath": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\ABC_Retail.csproj",
+      "projectPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\ABC_Retail.csproj",
       "packagesPath": "C:\\Users\\lab_services_student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\obj\\",
+      "outputPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -12482,7 +12482,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -12536,7 +12536,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

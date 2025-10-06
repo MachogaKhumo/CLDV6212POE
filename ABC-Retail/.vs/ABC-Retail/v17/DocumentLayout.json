@@ -1,58 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\",
+  "WorkspaceRootPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\services\\azurestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\services\\azurestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\documents\\github\\cldv6212poe\\abc-retail\\abc-retail\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\documents\\github\\cldv6212poe\\abc-retail\\abc-retail\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\desktop\\c# exercises\\repos\\abc-retail\\abc-retail\\views\\customer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\views\\customer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\documents\\github\\cldv6212poe\\abc-retail\\abc-retail\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\documents\\github\\cldv6212poe\\abc-retail\\abc-retail\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\documents\\github\\cldv6212poe\\abc-retail\\abc-retail\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\documents\\github\\cldv6212poe\\abc-retail\\abc-retail\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\documents\\github\\cldv6212poe\\abc-retail\\abc-retail\\services\\functionsapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\services\\functionsapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\documents\\github\\cldv6212poe\\abc-retail\\abc-retail\\services\\ifunctionsapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\services\\ifunctionsapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|c:\\users\\lab_services_student\\documents\\github\\cldv6212poe\\abc-retail\\abc-retail\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95283A8E-7A9A-458B-9FE3-27941D96A9FA}|ABC-Retail\\ABC_Retail.csproj|solutionrelative:abc-retail\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,166 +46,117 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "ABC-Retail\\Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "ABC-Retail\\Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAcwCYAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-28T09:32:02.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "ABC-Retail\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "ABC-Retail\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAADcAAAAAzMzMzMwYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T09:30:58.827Z",
-              "EditorCaption": ""
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ABC-Retail\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\appsettings.Development.json",
+              "RelativeToolTip": "ABC-Retail\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-05T15:14:39.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Order\\Index.cshtml",
-              "RelativeDocumentMoniker": "ABC-Retail\\Views\\Order\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Order\\Index.cshtml",
-              "RelativeToolTip": "ABC-Retail\\Views\\Order\\Index.cshtml",
-              "ViewState": "AgIAAB4AAACAzMzMzMwDwCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-28T09:05:56.169Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\appsettings.json",
+              "RelativeDocumentMoniker": "ABC-Retail\\appsettings.json",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\appsettings.json",
+              "RelativeToolTip": "ABC-Retail\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-05T15:13:51.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Customer\\Create.cshtml",
-              "RelativeDocumentMoniker": "ABC-Retail\\Views\\Customer\\Create.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Customer\\Create.cshtml",
-              "RelativeToolTip": "ABC-Retail\\Views\\Customer\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-28T08:59:50.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Customer\\Index.cshtml",
-              "RelativeDocumentMoniker": "ABC-Retail\\Views\\Customer\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Customer\\Index.cshtml",
-              "RelativeToolTip": "ABC-Retail\\Views\\Customer\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAYwB0AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-27T22:02:42.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "ABC-Retail\\Models\\Customer.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Models\\Customer.cs",
-              "RelativeToolTip": "ABC-Retail\\Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T22:02:28.44Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Customer\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ABC-Retail\\Views\\Customer\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Customer\\Edit.cshtml",
-              "RelativeToolTip": "ABC-Retail\\Views\\Customer\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-27T22:02:19.624Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\appsettings.json",
-              "RelativeDocumentMoniker": "ABC-Retail\\appsettings.json",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\appsettings.json",
-              "RelativeToolTip": "ABC-Retail\\appsettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAswAgAAADYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-27T20:06:16.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AzureStorageService.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Services\\AzureStorageService.cs",
-              "RelativeDocumentMoniker": "ABC-Retail\\Services\\AzureStorageService.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Services\\AzureStorageService.cs",
-              "RelativeToolTip": "ABC-Retail\\Services\\AzureStorageService.cs",
-              "ViewState": "AgIAAJ0AAADAm5mZmZkiwKgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T19:10:07.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Controllers\\OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "ABC-Retail\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Controllers\\OrderController.cs",
               "RelativeToolTip": "ABC-Retail\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAFEAAAAAsJmZmZn5v2cAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAswFUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T13:20:06.395Z"
+              "WhenOpened": "2025-10-05T15:11:28.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ABC-Retail\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ABC-Retail\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAEkAAABAmZmZmZkVwGMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T15:06:20.091Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "ABC-Retail\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Models\\Order.cs",
-              "RelativeToolTip": "ABC-Retail\\Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "ABC-Retail\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "ABC-Retail\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAAYAAACwMjMzM3MvwB4AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T13:21:23.894Z"
+              "WhenOpened": "2025-10-05T15:02:49.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Order\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ABC-Retail\\Views\\Order\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Views\\Order\\Edit.cshtml",
-              "RelativeToolTip": "ABC-Retail\\Views\\Order\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-27T22:03:07.955Z"
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Program.cs",
+              "RelativeDocumentMoniker": "ABC-Retail\\Program.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Program.cs",
+              "RelativeToolTip": "ABC-Retail\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T15:01:42.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FunctionsApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Services\\FunctionsApiClient.cs",
+              "RelativeDocumentMoniker": "ABC-Retail\\Services\\FunctionsApiClient.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Services\\FunctionsApiClient.cs",
+              "RelativeToolTip": "ABC-Retail\\Services\\FunctionsApiClient.cs",
+              "ViewState": "AgIAACIAAAAAzMzMzMwMwI8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T14:59:59.073Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "ABC-Retail\\Controllers\\CustomerController.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "ABC-Retail\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAABQAAAAAOGZmZmbmvyQAAAAJAAAAAAAAAA==",
+              "Title": "IFunctionsApi.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Services\\IFunctionsApi.cs",
+              "RelativeDocumentMoniker": "ABC-Retail\\Services\\IFunctionsApi.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Services\\IFunctionsApi.cs",
+              "RelativeToolTip": "ABC-Retail\\Services\\IFunctionsApi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T07:12:58.724Z"
+              "WhenOpened": "2025-10-05T14:58:42.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ABC-Retail\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ABC-Retail\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T14:35:51.022Z"
             }
           ]
         }

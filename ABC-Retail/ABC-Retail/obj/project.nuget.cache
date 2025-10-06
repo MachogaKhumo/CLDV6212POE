@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0V7olCHd2oI=",
+  "dgSpecHash": "5OBFdWXm19E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lab_services_student\\Desktop\\C# Exercises\\repos\\ABC-Retail\\ABC-Retail\\ABC_Retail.csproj",
+  "projectFilePath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\CLDV6212POE\\ABC-Retail\\ABC-Retail\\ABC_Retail.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lab_services_student\\.nuget\\packages\\azure.core\\1.46.2\\azure.core.1.46.2.nupkg.sha512",
     "C:\\Users\\lab_services_student\\.nuget\\packages\\azure.data.tables\\12.11.0\\azure.data.tables.12.11.0.nupkg.sha512",
