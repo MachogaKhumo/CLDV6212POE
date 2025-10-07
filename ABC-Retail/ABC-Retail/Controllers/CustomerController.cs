@@ -29,7 +29,7 @@ namespace ABC_Retail.Controllers
         {
             if (!ModelState.IsValid) return View(model);
             // Try Functions API first, fallback to direct storage
-            var success = await _functionsApi.AddCustomerAsync(model);
+            var success = await _functionsApi.CreateCustomerAsync(model);
             if (!success)
             {
                 // Fallback to direct storage

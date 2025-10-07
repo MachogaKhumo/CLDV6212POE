@@ -1,144 +1,237 @@
 ﻿using ABC_Retail.Models;
 using Microsoft.Extensions.Configuration;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 
 namespace ABC_Retail.Services
 {
-    public class FunctionsApiClient : IFunctionsApi
-    {
-        private readonly HttpClient _httpClient;
-        private readonly IConfiguration _configuration;
-        private readonly ILogger<FunctionsApiClient> _logger;
-
-        public FunctionsApiClient(HttpClient httpClient, IConfiguration configuration, ILogger<FunctionsApiClient> logger)
+        public class FunctionsApiClient : IFunctionsApi
         {
-            _httpClient = httpClient;
-            _configuration = configuration;
-            _logger = logger;
+            private readonly HttpClient _http;
+            private readonly JsonSerializerOptions _jsonOptions;
 
-            var baseUrl = _configuration["Functions:BaseUrl"];
-            if (!string.IsNullOrEmpty(baseUrl))
+            public FunctionsApiClient(HttpClient http)
             {
-                _httpClient.BaseAddress = new Uri(baseUrl);
-            }
-        }
-
-        public async Task<bool> AddCustomerAsync(Customer customer)
-        {
-            try
-            {
-                var customerDto = new
+                _http = http;
+                // Functions return camelCase JSON; set case-insensitive to map to Pascal-case MVC models
+                _jsonOptions = new JsonSerializerOptions
                 {
-                    RowKey = customer.RowKey,
-                    Name = customer.Name,
-                    Surname = customer.Surname,
-                    Username = customer.Username,
-                    Email = customer.Email,
-                    ShippingAddress = customer.ShippingAddress
+                    PropertyNameCaseInsensitive = true
                 };
+            }
 
-                var json = JsonSerializer.Serialize(customerDto);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
+            // ---------- Customers ----------
+            public async Task<List<Customer>> GetCustomersAsync()
+            {
+                var resp = await _http.GetAsync("customers");
+                if (!resp.IsSuccessStatusCode) return new List<Customer>();
+                var stream = await resp.Content.ReadAsStreamAsync();
+                return await JsonSerializer.DeserializeAsync<List<Customer>>(stream, _jsonOptions) ?? new();
+            }
 
-                var response = await _httpClient.PostAsync("api/AddCustomer", content);
+            public async Task<Customer?> GetCustomerAsync(string id)
+            {
+                var resp = await _http.GetAsync($"customers/{id}");
+                if (!resp.IsSuccessStatusCode) return null;
+                var stream = await resp.Content.ReadAsStreamAsync();
+                return await JsonSerializer.DeserializeAsync<Customer>(stream, _jsonOptions);
+            }
 
-                if (response.IsSuccessStatusCode)
+            public async Task<bool> CreateCustomerAsync(Customer customer)
+            {
+                var resp = await _http.PostAsJsonAsync("customers", customer, _jsonOptions);
+                return resp.IsSuccessStatusCode;
+            }
+
+            public async Task<bool> UpdateCustomerAsync(string id, Customer customer)
+            {
+                var resp = await _http.PutAsJsonAsync($"customers/{id}", customer, _jsonOptions);
+                return resp.IsSuccessStatusCode;
+            }
+
+            public async Task<bool> DeleteCustomerAsync(string id)
+            {
+                var resp = await _http.DeleteAsync($"customers/{id}");
+                return resp.IsSuccessStatusCode;
+            }
+
+            // ---------- Products ----------
+            public async Task<List<Product>> GetProductsAsync()
+            {
+                var resp = await _http.GetAsync("products");
+                if (!resp.IsSuccessStatusCode) return new List<Product>();
+                var stream = await resp.Content.ReadAsStreamAsync();
+                return await JsonSerializer.DeserializeAsync<List<Product>>(stream, _jsonOptions) ?? new();
+            }
+
+            public async Task<Product?> GetProductAsync(string id)
+            {
+                var resp = await _http.GetAsync($"products/{id}");
+                if (!resp.IsSuccessStatusCode) return null;
+                var stream = await resp.Content.ReadAsStreamAsync();
+                return await JsonSerializer.DeserializeAsync<Product>(stream, _jsonOptions);
+            }
+
+            // Creates product; if imageFile supplied, sends multipart/form-data to product endpoint
+            public async Task<bool> CreateProductAsync(Product product, IFormFile? imageFile = null)
+            {
+                if (imageFile == null)
                 {
-                    _logger.LogInformation("Customer added via Functions API");
-                    return true;
+                    var resp = await _http.PostAsJsonAsync("products", product, _jsonOptions);
+                    return resp.IsSuccessStatusCode;
                 }
 
-                _logger.LogWarning("Functions API call failed, will use direct storage");
-                return false;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error calling Functions API for AddCustomer");
-                return false; // Fallback to direct storage
-            }
-        }
+                using var content = new MultipartFormDataContent();
+                content.Add(new StringContent(product.ProductName ?? ""), "ProductName");
+                content.Add(new StringContent(product.Description ?? ""), "Description");
+                content.Add(new StringContent(product.Price.ToString(System.Globalization.CultureInfo.InvariantCulture)), "Price");
+                content.Add(new StringContent(product.StockAvailable.ToString()), "AvailableStock");
 
-        public async Task<string> UploadProductImageAsync(IFormFile file)
+                var ms = new MemoryStream();
+                await imageFile.CopyToAsync(ms);
+                ms.Position = 0;
+                var fileContent = new StreamContent(ms);
+                fileContent.Headers.ContentType = new MediaTypeHeaderValue(imageFile.ContentType ?? "application/octet-stream");
+                content.Add(fileContent, "ImageFile", imageFile.FileName);
+
+                var respMultipart = await _http.PostAsync("products", content);
+                return respMultipart.IsSuccessStatusCode;
+            }
+
+            public async Task<bool> UpdateProductAsync(string id, Product product, IFormFile? imageFile = null)
+            {
+                if (imageFile == null)
+                {
+                    var resp = await _http.PutAsJsonAsync($"products/{id}", product, _jsonOptions);
+                    return resp.IsSuccessStatusCode;
+                }
+
+                using var content = new MultipartFormDataContent();
+                content.Add(new StringContent(product.ProductName ?? ""), "ProductName");
+                content.Add(new StringContent(product.Description ?? ""), "Description");
+                content.Add(new StringContent(product.Price.ToString(System.Globalization.CultureInfo.InvariantCulture)), "Price");
+                content.Add(new StringContent(product.StockAvailable.ToString()), "AvailableStock");
+
+                var ms = new MemoryStream();
+                await imageFile.CopyToAsync(ms);
+                ms.Position = 0;
+                var fileContent = new StreamContent(ms);
+                fileContent.Headers.ContentType = new MediaTypeHeaderValue(imageFile.ContentType ?? "application/octet-stream");
+                content.Add(fileContent, "ImageFile", imageFile.FileName);
+
+                var respMultipart = await _http.PutAsync($"products/{id}", content);
+                return respMultipart.IsSuccessStatusCode;
+            }
+
+            public async Task<bool> DeleteProductAsync(string id)
+            {
+                var resp = await _http.DeleteAsync($"products/{id}");
+                return resp.IsSuccessStatusCode;
+            }
+
+        public async Task<string> UploadProductImageAsync(IFormFile imageFile)
         {
             try
             {
-                using var formData = new MultipartFormDataContent();
-                using var fileStream = file.OpenReadStream();
-                var fileContent = new StreamContent(fileStream);
-                formData.Add(fileContent, "image", file.FileName);
+                using var content = new MultipartFormDataContent();
 
-                var response = await _httpClient.PostAsync("api/UploadProductImage", formData);
+                // Add the image file
+                var ms = new MemoryStream();
+                await imageFile.CopyToAsync(ms);
+                ms.Position = 0;
+                var fileContent = new StreamContent(ms);
+                fileContent.Headers.ContentType = new MediaTypeHeaderValue(imageFile.ContentType ?? "application/octet-stream");
+                content.Add(fileContent, "image", imageFile.FileName);
+
+                // Call your Azure Function for image uploads
+                var response = await _http.PostAsync("uploads/product-image", content);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    var result = await response.Content.ReadFromJsonAsync<JsonElement>();
-                    _logger.LogInformation("Image uploaded via Functions API");
-                    return result.GetProperty("url").GetString();
+                    var imageUrl = await response.Content.ReadAsStringAsync();
+                    return imageUrl.Trim('"'); // Remove quotes if API returns quoted string
                 }
-
-                _logger.LogWarning("Functions API call failed for image upload");
-                return null;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error calling Functions API for UploadProductImage");
-                return null; // Fallback to direct storage
+                // Log the error
+                Console.WriteLine($"Error uploading product image via Functions API: {ex.Message}");
             }
+
+            return string.Empty; // Return empty string if upload fails
         }
 
-        public async Task<bool> QueueOrderMessageAsync(string message)
-        {
-            try
+        // ---------- Orders ----------
+        public async Task<List<Order>> GetOrdersAsync()
             {
-                var messageDto = new { Message = message };
-                var json = JsonSerializer.Serialize(messageDto);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var resp = await _http.GetAsync("orders");
+                if (!resp.IsSuccessStatusCode) return new List<Order>();
+                var stream = await resp.Content.ReadAsStreamAsync();
+                return await JsonSerializer.DeserializeAsync<List<Order>>(stream, _jsonOptions) ?? new();
+            }
 
-                var response = await _httpClient.PostAsync("api/QueueOrderMessage", content);
+            public async Task<Order?> GetOrderAsync(string id)
+            {
+                var resp = await _http.GetAsync($"orders/{id}");
+                if (!resp.IsSuccessStatusCode) return null;
+                var stream = await resp.Content.ReadAsStreamAsync();
+                return await JsonSerializer.DeserializeAsync<Order>(stream, _jsonOptions);
+            }
 
-                if (response.IsSuccessStatusCode)
+            public async Task<bool> CreateOrderAsync(Order order)
+            {
+                var resp = await _http.PostAsJsonAsync("orders", order, _jsonOptions);
+                return resp.IsSuccessStatusCode;
+            }
+
+            public async Task<bool> UpdateOrderStatusAsync(string id, Order order)
+            {
+                var resp = await _http.PutAsJsonAsync($"orders/{id}/status", new { status = order.Status }, _jsonOptions);
+                return resp.IsSuccessStatusCode;
+            }
+
+            public async Task<bool> DeleteOrderAsync(string id)
+            {
+                var resp = await _http.DeleteAsync($"orders/{id}");
+                return resp.IsSuccessStatusCode;
+            }
+
+            public async Task<bool> QueueOrderMessageAsync(string message)
+            {
+                try
                 {
-                    _logger.LogInformation("Message queued via Functions API");
-                    return true;
+                    var payload = new { message };
+                    var response = await _http.PostAsJsonAsync("queue-order", payload, _jsonOptions);
+                    return response.IsSuccessStatusCode;
                 }
-
-                _logger.LogWarning("Functions API call failed for queue message");
-                return false;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error calling Functions API for QueueOrderMessage");
-                return false; // Fallback to direct storage
-            }
-        }
-
-        public async Task<bool> UploadContractAsync(IFormFile file)
-        {
-            try
-            {
-                using var formData = new MultipartFormDataContent();
-                using var fileStream = file.OpenReadStream();
-                var fileContent = new StreamContent(fileStream);
-                formData.Add(fileContent, "file", file.FileName);
-
-                var response = await _httpClient.PostAsync("api/UploadContract", formData);
-
-                if (response.IsSuccessStatusCode)
+                catch (Exception ex)
                 {
-                    _logger.LogInformation("Contract uploaded via Functions API");
-                    return true;
+                    // Log the error if needed
+                    Console.WriteLine($"Error queueing message: {ex.Message}");
+                    return false;
                 }
-
-                _logger.LogWarning("Functions API call failed for contract upload");
-                return false;
             }
-            catch (Exception ex)
+
+        // ---------- Uploads (proof of payment) ----------
+        public async Task<(bool Success, string? Error)> UploadProofOfPaymentAsync(IFormFile file, string orderId, string customerName)
             {
-                _logger.LogError(ex, "Error calling Functions API for UploadContract");
-                return false; // Fallback to direct storage
+                using var content = new MultipartFormDataContent();
+                var ms = new MemoryStream();
+                await file.CopyToAsync(ms);
+                ms.Position = 0;
+                var streamContent = new StreamContent(ms);
+                streamContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType ?? "application/octet-stream");
+                content.Add(streamContent, "ProofOfPayment", file.FileName);
+                content.Add(new StringContent(orderId ?? ""), "OrderID");
+                content.Add(new StringContent(customerName ?? ""), "CustomerName");
+
+                var resp = await _http.PostAsync("uploads/proof-of-payment", content);
+                if (!resp.IsSuccessStatusCode)
+                    return (false, $"Upload failed: {(int)resp.StatusCode} {resp.ReasonPhrase}");
+                return (true, null);
             }
         }
     }
-}
+
