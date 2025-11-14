@@ -304,16 +304,6 @@ C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\o
 C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.pdb
 C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.genruntimeconfig.cache
 C:\Users\lab_services_student\Desktop\C# Exercises\repos\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ref\ABC_Retail.dll
-C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.csproj.AssemblyReference.cache
-C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\rpswa.dswa.cache.json
-C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.AssemblyInfoInputs.cache
-C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.AssemblyInfo.cs
-C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.csproj.CoreCompileInputs.cache
-C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.RazorAssemblyInfo.cache
-C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.RazorAssemblyInfo.cs
-C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.sourcelink.json
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\appsettings.json
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\ABC_Retail.staticwebassets.runtime.json
@@ -337,6 +327,7 @@ C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.Build.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.Build.Framework.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.Build.Locator.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -347,11 +338,14 @@ C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.CodeAnalysis.Scripting.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.DiaSymReader.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\Microsoft.Extensions.Azure.dll
@@ -540,6 +534,19 @@ C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\runtimes\win7-x64\native\Cosmos.CRTCompat.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\runtimes\win7-x64\native\Microsoft.Azure.Documents.ServiceInterop.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
@@ -549,6 +556,16 @@ C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.csproj.AssemblyReference.cache
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.AssemblyInfoInputs.cache
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.AssemblyInfo.cs
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.csproj.CoreCompileInputs.cache
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.RazorAssemblyInfo.cache
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.RazorAssemblyInfo.cs
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.sourcelink.json
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -629,3 +646,4 @@ C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.pdb
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ABC_Retail.genruntimeconfig.cache
 C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\ref\ABC_Retail.dll
+C:\Users\lab_services_student\Documents\GitHub\CLDV6212POE\ABC-Retail\ABC-Retail\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

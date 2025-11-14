@@ -66,6 +66,14 @@
               "target": "Package",
               "version": "[12.23.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.Azure.Cosmos.Table": {
               "target": "Package",
               "version": "[1.0.8, )"
@@ -84,11 +92,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.Extensions.Azure": {
               "target": "Package",
-              "version": "[1.12.0, )"
+              "version": "[1.13.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
