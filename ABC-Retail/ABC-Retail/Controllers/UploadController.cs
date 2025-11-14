@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ABC_Retail.Models;
 using ABC_Retail.Services;
-using ABC_Retail.Models;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ABC_Retail.Controllers
 {
+    [Authorize]
     public class UploadController : Controller
     {
         private readonly IAzureStorageService _storage;

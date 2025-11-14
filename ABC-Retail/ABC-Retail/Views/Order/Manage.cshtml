@@ -1,0 +1,44 @@
+﻿@model List<ABC_Retail.Models.Order>
+@{
+    ViewData["Title"] = "Manage Orders";
+}
+
+<h2>Manage Orders</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.RowKey</td>
+                <td>@order.Username</td>
+                <td>@order.ProductName</td>
+                <td>@order.Quantity</td>
+                <td>R @order.TotalPrice</td>
+                <td>
+                    <span class="badge @(order.Status == "Completed" ? "bg-success" : order.Status == "Processing" ? "bg-warning" : "bg-secondary")">
+                        @order.Status
+                    </span>
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@order.RowKey" class="btn btn-sm btn-outline-primary">Edit</a>
+                    <form asp-action="Delete" method="post" class="d-inline">
+                        <input type="hidden" name="id" value="@order.RowKey" />
+                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

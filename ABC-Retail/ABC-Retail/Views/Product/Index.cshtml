@@ -37,6 +37,13 @@
                     <form method="post" asp-action="Delete" asp-route-id="@p.RowKey" class="d-inline">
                         <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Delete this product?')">Delete</button>
                     </form>
+
+                    @if (User.IsInRole("Customer"))
+                    {
+                        <form asp-controller="Cart" asp-action="Add" asp-route-productId="@p.RowKey" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-success btn-sm">Add to Cart</button>
+                        </form>
+                    }
                 </td>
             </tr>
         }

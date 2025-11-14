@@ -1,9 +1,11 @@
 ﻿using ABC_Retail.Models;
 using ABC_Retail.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ABC_Retail.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         private readonly IAzureStorageService _storage;
@@ -12,25 +14,27 @@ namespace ABC_Retail.Controllers
         public ProductController(IAzureStorageService storage, IFunctionsApi functionsApi)
         {
             _storage = storage;
-            _functionsApi = functionsApi; // Inject Functions API
+            _functionsApi = functionsApi;
         }
 
+        [Authorize(Roles = "Admin, Customer")]
         public async Task<IActionResult> Index()
         {
             var products = await _storage.GetProductsAsync();
             return View(products);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Create() => View(new Product());
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Product model, IFormFile? image)
         {
             if (image != null)
             {
-                // Try Functions API first for image upload
                 var imageUrl = await _functionsApi.UploadProductImageAsync(image);
                 if (!string.IsNullOrEmpty(imageUrl))
                 {
@@ -39,7 +43,6 @@ namespace ABC_Retail.Controllers
                 }
                 else
                 {
-                    // Fallback to direct storage
                     var url = await _storage.UploadProductImageAsync(image);
                     model.ImageUrl = url;
                     TempData["Msg"] = "Product added (direct storage).";
@@ -53,6 +56,7 @@ namespace ABC_Retail.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Edit(string id)
         {
@@ -61,13 +65,13 @@ namespace ABC_Retail.Controllers
             return View(product);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Product model, IFormFile? image)
         {
             if (image != null)
             {
-                // Try Functions API first for image upload
                 var imageUrl = await _functionsApi.UploadProductImageAsync(image);
                 if (!string.IsNullOrEmpty(imageUrl))
                 {
@@ -76,7 +80,6 @@ namespace ABC_Retail.Controllers
                 }
                 else
                 {
-                    // Fallback to direct storage
                     var url = await _storage.UploadProductImageAsync(image);
                     model.ImageUrl = url;
                     TempData["Msg"] = "Product updated (direct storage).";
@@ -90,6 +93,7 @@ namespace ABC_Retail.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(string id)

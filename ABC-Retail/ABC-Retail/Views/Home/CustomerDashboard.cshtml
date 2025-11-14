@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Customer Dashboard";
+    var username = User.Identity?.Name ?? "Customer";
+}
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h2>Welcome, @username!</h2>
+        <p class="text-muted">You are logged in as a <strong>Customer</strong>.</p>
+    </div>
+
+    <div class="row g-4 mb-5 text-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Browse Products</h5>
+                    <p class="card-text">Shop our available products and add to your cart.</p>
+                    <a asp-controller="Product" asp-action="Index" class="btn btn-outline-success w-100">Go to Products</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">My Cart</h5>
+                    <p class="card-text">View and manage your cart items before checkout.</p>
+                    <a asp-controller="Cart" asp-action="Index" class="btn btn-outline-warning w-100">View My Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">My Orders</h5>
+                    <p class="card-text">Check your placed orders and track their status.</p>
+                    <a asp-controller="Order" asp-action="MyOrders" class="btn btn-outline-primary w-100">View My Orders</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-group">
+        <a asp-controller="Upload" asp-action="Index" class="list-group-item list-group-item-action">Upload Payment Proof</a>
+        <a asp-controller="Home" asp-action="Privacy" class="list-group-item list-group-item-action">View Privacy Policy</a>
+    </div>
+</div>
